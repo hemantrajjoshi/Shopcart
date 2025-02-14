@@ -846,20 +846,21 @@ nav ul li .dropdown a #categoryLink:hover {
     flex-wrap: wrap;
 }
 
-.row {
+#brand .row {
     display: flex;
     justify-content: space-between;
     flex-basis: 100%;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
 }
 
 .cont {
+    cursor: pointer;
     flex-basis: 23%;
     border: 1px solid #ccc;
     padding: 10px;
     margin-bottom: 10px;
     /* Add margin-bottom for space between boxes */
-    margin-right: 10px;
+    margin-right: 40px;
     /* Add margin-right for space between boxes */
 }
 
@@ -1642,4 +1643,124 @@ cursor: pointer;
     color: #0011ff;
     font-size: 22px;
 
+}
+/* responsive  */
+
+@media screen and (max-width: 768px) {
+#brand h1{
+    
+    font-size: 25px;
+}
+#brand .row{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+#off .discount-type {
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#off .discount-type .discount{
+    margin-bottom: 30px;
+}
+#cash{
+    display: flex;
+    flex-direction: column;
+}
+#cash .cash-back img{
+    display: none;
+}
+#get .getback {
+    display: flex;
+    flex-direction: column;
+}
+#get{
+    height: 60vh;
+    width: auto;
+}
+#get .image11 {
+    margin-top: 150px;
+    margin-left: -80px;
+
+}
+
+.r {
+    height: 100px;
+    width: 240px;
+    position: relative;
+    top: 240px;
+    left: -200px;
+    rotate: z -10deg;
+}
+
+.g {
+    height: 100px;
+    width: 240px;
+    position: relative;
+    top: 165px;
+    right: 190px;
+    rotate: z -20deg;
+}
+
+.y {
+    height: 100px;
+    width: 270px;
+    position: relative;
+    top: 0px;
+    left: -200px;
+    rotate: z -10deg;
+    z-index: -1;
+}
+
+#get h1 {
+    color: #000000bb;
+    margin-left: 100px;
+    line-height: 100px;
+    margin-top: 50px;
+    font-weight: 800;
+    font-size: 30px;
+}
+.slider-container {
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .slider {
+    display: flex;
+    flex-direction: row;
+    transition: transform 0.5s ease-in-out;
+  }
+  .discount-type {
+    transition: transform 0.5s ease-in-out;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  
+  .discount {
+    width: 100%;
+    max-width: 550px;
+    margin: 0 10px;
+    flex-shrink: 0;
+    box-sizing: border-box;
+ 
+  }
+/* Optional: Add an automatic sliding feature using animation */
+@keyframes slide {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-100%); }
+    50% { transform: translateX(-200%); }
+    75% { transform: translateX(-300%); }
+    100% { transform: translateX(0); }
+  }
+  
+  /* Apply the animation */
+  .slider {
+    animation: slide 12s infinite;
+  }  
 }
